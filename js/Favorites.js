@@ -94,6 +94,7 @@ export class FavoritesView extends Favorites{
       row.querySelector('.repos').textContent = `${user.public_repos}`
       row.querySelector('.followers').textContent = `${user.followers}`
 
+      row.querySelector('.remove')
       row.querySelector('.remove').onclick = () => {
         const isOk = confirm(`Remover ${user.name} dos favoritos?`)
 
@@ -126,7 +127,9 @@ export class FavoritesView extends Favorites{
         1234
       </td>
       <td>
-        <button class="remove">Remover</button>
+        <button class="remove">
+          <i class="ph ph-x"></i>
+        </button>
       </td>
     `
     return tr
